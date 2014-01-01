@@ -68,15 +68,18 @@ img {
 /*  padding: 10px 0;*/
   background: #fff;
   display: block;
-  border-bottom: 1px solid #ccc;
 /*  box-shadow: 0 1px 2px #333;*/
 }
+
+.top-banner:after {
+  border-bottom: 1px solid #ccc;
+}
+
 
 footer {
   width: 860px;
   padding: 0 20px;
   margin: auto;
-  border-top: 1px solid #ccc;
   height: 30px;
   background: #fff;
 }
@@ -130,6 +133,8 @@ h3.title {
 
 /* ----------------------------------------------------- */
 /* TOP BANNER */
+
+
 
 .profile-logo {
   float: left;
@@ -239,12 +244,12 @@ img.project-icon {
   padding: 6px 0;
   font-size: 12px;
   width: 100px;
-  box-shadow: -2px 2px 2px #aaa;
+  box-shadow: -1px 1px 1px #aaa;
   margin-bottom: 5px;
 }
 
 .tech {
-  padding-top: 4px;
+  padding-bottom: 4px;
   font-size: 14px;
 }
 
