@@ -1,7 +1,8 @@
-body, h1, h2, a, ul, li {
+body, h1, h2, h3, a, ul, li, header, p, section {
   margin: 0;
   padding: 0;
   border: 0;
+
 
   font: inherit;
   font-size: 100%;
@@ -21,7 +22,17 @@ a {
   display: block;
 }
 
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+/* */
 body {
+  font-family: sans-serif;
   width: 1000px;
   margin: auto;
   padding: 20px 20px 50px 20px;
@@ -29,7 +40,6 @@ body {
 
 .profile-sidebar {
   padding: 10px;
-  float: left;
   width: 200px;
   border: 1px solid green;
 }
@@ -42,25 +52,122 @@ body {
   border: 1px solid skyblue;
 }
 
-header {
+.top-nav {
+  z-index: 5;
   padding: 10px;
-  background: #3ff;
-  border: 1px solid red;
-  float: left;
-}
-
-.main-content {
-}
-
-header h1 {
+  background: #fff;
   display: block;
-  width: 756px;
-  text-align: right;
+  box-shadow: 0 1px 2px #333;
 }
 
-footer {
+.posts {
+  width: 500px;
   padding: 10px;
-  height: 50px;
-  border: 1px solid purple;
+/*  border: 1px solid blue;*/
+/*  background: blue;*/
 }
 
+.top-nav a {
+  font-weight: bold;
+  display: block;
+  color: #333;
+/*  width: 756px;*/
+  text-align: right;
+  text-spacing: 4px;
+}
+
+.post {
+  padding: 10px;
+  margin-top: 20px;
+/*  border-bottom: 1px solid #ccc;*/
+}
+
+.post header {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+.post-title.references {
+
+}
+.references li{
+  float: left;
+  padding-left: 10px;
+}
+
+.post p {
+  color: #555;
+}
+
+.post img {
+  margin-left: 10px;
+}
+
+#languages {
+/*  position: relative;*/
+  width: 110px;
+/*  right: 20px;*/
+/*  border-right: 1px solid #ccc;*/
+}
+
+
+.language {
+/*  font-weight: bold;*/
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  width: 100px;
+  box-shadow: -2px 2px 2px #aaa;
+  margin: 5px 0;
+}
+
+.ruby {
+  color: #fff;
+  background: #F7977A;
+}
+
+.sql {
+  color: #fff;
+  background: #A187BE;
+}
+
+.js {
+/*  color: #000;*/
+  background: #82CA9D;
+}
+
+.web {
+/*  color: #000;*/
+  background: #F9AD81;
+}
+
+.lua {
+  color: #fff;
+  background: #7EA7D8;
+}
+
+.inactive {
+  opacity: 0.3;
+}
+
+#features {
+  position: relative;
+  right: 12px;
+  margin-top: 5px;
+  z-index: 0;
+  width: 120px;
+  background: #fff;
+/*  border: 1px solid purple;*/
+  padding: 0 10px;
+  box-shadow: -2px 0 2px 0 #666;
+  border-left: 1px solid #333;
+}
+
+.feature {
+  padding: 6px 0;
+  font-size: 12px;
+  margin: 5px 0;
+}
