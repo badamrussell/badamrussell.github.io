@@ -122,9 +122,6 @@ footer {
 /*  border-left: 1px solid #333;*/
 }
 
-
-
-
 h3.title {
   font-weight: bold;
 /*  margin-bottom: 20px;*/
@@ -147,7 +144,7 @@ h3.title {
 
 .top-nav ul li {
   float: left;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 
@@ -160,8 +157,6 @@ h3.title {
 
 /* ----------------------------------------------------- */
 /* PROJECT SIDEBAR */
-
-
 
 img.project-thumb {
 /*  margin: 5px 5px 5px 0;
@@ -185,6 +180,7 @@ img.project-icon {
 .content-title {
   margin-bottom: 10px;
 }
+
 .content-title h3 {
   display: inline;
   text-align: left;
@@ -202,49 +198,25 @@ img.project-icon {
   display: inline;
 }
 
-
-
-.post-title {
-  margin-bottom: 10px;
-}
-
-.post header {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 10px;
-}
-
-.references {
-  vertical-align: baseline;
-}
-
-.references li {
-  float: left;
-  padding-left: 10px;
-}
-
-.post p {
+.content p {
   color: #555;
   text-align: justify;
 }
-
-
-
 
 
 /* ----------------------------------------------------- */
 /* FEATURES */
 
 .language {
-/*  font-weight: bold;*/
+  font-weight: bold;
+  text-shadow: 0 1px 1px #aaa;
   color: #fff;
+  background: #fff;
   text-align: center;
   padding: 6px 0;
   font-size: 12px;
   width: 100px;
-  box-shadow: -1px 1px 1px #aaa;
+/*  box-shadow: -1px 1px 1px #aaa;*/
   margin-bottom: 5px;
 }
 
@@ -255,28 +227,36 @@ img.project-icon {
 
 
 .ruby {
-  color: #fff;
-  background: #F7977A;
+  color: #FF2626;
+  border: 1px solid #FF2626;
+/*  background: #F7977A;*/
+/*  background: #FF7575;*/
 }
 
 .sql {
-  color: #fff;
-  background: #A187BE;
+  color: #872187;
+  border: 1px solid #872187;
+/*  background: #AD8BFE;*/
+/*  background: #A187BE;*/
 }
 
 .js {
-/*  color: #000;*/
-  background: #82CA9D;
+  color: #2966B8;
+  border: 1px solid #2966B8;
+/*  background: #82CA9D;*/
 }
 
 .web {
-/*  color: #000;*/
-  background: #F9AD81;
+  color: #FF800D;
+  border: 1px solid #FF800D;
+/*  background: #F9AD81;*/
+/*  background: #FF9C4A;*/
 }
 
 .lua {
-  color: #fff;
-  background: #7EA7D8;
+  color: #59955C;
+  border: 1px solid #59955C;
+/*  background: #7EA7D8;*/
 }
 
 .inactive {
