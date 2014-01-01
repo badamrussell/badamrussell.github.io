@@ -54,14 +54,14 @@ img {
 /* MAIN AREAS */
 
 #main-content {
-  width: 900px;
+  width: 860px;
   padding: 0 20px 50px 20px;
   margin: auto;
   background: #fff;
 }
 
 .top-banner {
-  width: 900px;
+  width: 860px;
   padding: 10px 20px 0 20px;
   margin: auto;
   z-index: 5;
@@ -73,7 +73,7 @@ img {
 }
 
 footer {
-  width: 900px;
+  width: 860px;
   padding: 0 20px;
   margin: auto;
   border-top: 1px solid #ccc;
@@ -95,8 +95,7 @@ footer {
 }
 
 #features {
-  margin-top: 10px;
-  padding: 0 10px 0 10px;
+  padding: 10px 10px 0 10px;
 }
 
 #languages {
@@ -104,13 +103,14 @@ footer {
 /*  width: 110px;*/
 /*  right: 20px;*/
 /*  border-right: 1px solid #ccc;*/
+  margin-top: 10px;
 }
 
 #technology {
 /*  position: relative;*/
 /*  right: 12px;*/
 /*  margin-top: 5px;*/
-  margin-left: 10px;
+  margin: 10px 0 0 10px;
   z-index: 0;
 /*  width: 120px;*/
   background: #fff;
@@ -240,7 +240,7 @@ img.project-icon {
   font-size: 12px;
   width: 100px;
   box-shadow: -2px 2px 2px #aaa;
-  margin: 5px 0;
+  margin-bottom: 5px;
 }
 
 .tech {
