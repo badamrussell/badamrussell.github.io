@@ -7,6 +7,7 @@ body, h1, h2, h3, a, ul, li, header, p, nav, section {
   padding: 0;
   border: 0;
 
+  vertical-align: baseline;
   font-family: 'Raleway', sans-serif;
   font: inherit;
   font-size: 100%;
@@ -36,31 +37,48 @@ a {
 
 body {
   font-family: 'Raleway', sans-serif;
-  width: 960px;
   margin: auto;
-  padding: 0 20px 50px 20px;
-  background: #eee;
+  background: #333;
 }
 
 img {
   border-radius: 4px;
 }
+
+/* ----------------------------------------------------- */
+/* GENERAL POSITIONAL WRAPPERS */
+
+
+
 /* ----------------------------------------------------- */
 /* MAIN AREAS */
 
 #main-content {
-  background: #fff;
+  width: 900px;
   padding: 0 20px 50px 20px;
+  margin: auto;
+  background: #fff;
 }
 
 .top-banner {
+  width: 900px;
+  padding: 10px 20px 0 20px;
+  margin: auto;
   z-index: 5;
-  padding-top: 10px;
 /*  padding: 10px 0;*/
   background: #fff;
   display: block;
   border-bottom: 1px solid #ccc;
 /*  box-shadow: 0 1px 2px #333;*/
+}
+
+footer {
+  width: 900px;
+  padding: 0 20px;
+  margin: auto;
+  border-top: 1px solid #ccc;
+  height: 30px;
+  background: #fff;
 }
 
 
@@ -77,40 +95,36 @@ img {
 }
 
 #features {
-  padding-top: 10px;
+  margin-top: 10px;
+  padding: 0 10px 0 10px;
 }
 
 #languages {
-  padding-top: 10px;
 /*  position: relative;*/
-  width: 110px;
+/*  width: 110px;*/
 /*  right: 20px;*/
 /*  border-right: 1px solid #ccc;*/
 }
 
 #technology {
-  padding-top: 10px;
 /*  position: relative;*/
 /*  right: 12px;*/
 /*  margin-top: 5px;*/
+  margin-left: 10px;
   z-index: 0;
-  width: 120px;
+/*  width: 120px;*/
   background: #fff;
 /*  border: 1px solid purple;*/
 /*  box-shadow: -2px 0 2px 0 #666;*/
 /*  border-left: 1px solid #333;*/
 }
 
-footer {
-  border-top: 1px solid #ccc;
-  height: 30px;
-  background: #fff;
-}
+
 
 
 h3.title {
   font-weight: bold;
-  margin-bottom: 20px;
+/*  margin-bottom: 20px;*/
 }
 
 
@@ -124,22 +138,19 @@ h3.title {
 }
 
 .top-nav ul {
-  float: right;
 }
 
 .top-nav ul li {
   float: left;
+  margin-left: 10px;
 }
 
 
 
-.top-nav a {
+.text-link {
+  line-height: 30px;
   font-weight: bold;
   display: block;
-  color: #333;
-/*  width: 756px;*/
-  text-align: right;
-  text-spacing: 4px;
 }
 
 /* ----------------------------------------------------- */
@@ -159,23 +170,38 @@ img.project-icon {
   margin-left: 10px;*/
   float: left;
   width: 110px;
-  margin: 0 10px 10px 0;
+  margin: 10px 10px 10px 0;
   border-radius: 8px;
 }
 
 /* ----------------------------------------------------- */
 /* CONTENT */
 
+.content-title {
+  margin-bottom: 10px;
+}
+.content-title h3 {
+  display: inline;
+  text-align: left;
+}
+
+.content-title a {
+  float: right;
+  padding: 10px 0 0 20px;
+  text-align: right;
+}
+
 .project-title {
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 20px;
+  display: inline;
 }
 
-/*.post {
-  padding: 10px;
-  margin-top: 20px;
-}*/
+
+
+.post-title {
+  margin-bottom: 10px;
+}
 
 .post header {
   font-size: 16px;
@@ -185,8 +211,8 @@ img.project-icon {
   margin-bottom: 10px;
 }
 
-.post-title.references {
-
+.references {
+  vertical-align: baseline;
 }
 
 .references li {
@@ -196,6 +222,7 @@ img.project-icon {
 
 .post p {
   color: #555;
+  text-align: justify;
 }
 
 
