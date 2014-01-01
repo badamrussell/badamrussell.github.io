@@ -1,9 +1,13 @@
-body, h1, h2, h3, a, ul, li, header, p, section {
+
+
+/* ----------------------------------------------------- */
+/* GENERAL SETUP */
+body, h1, h2, h3, a, ul, li, header, p, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
 
-
+  font-family: 'Raleway', sans-serif;
   font: inherit;
   font-size: 100%;
 }
@@ -30,42 +34,104 @@ a {
   float: left;
 }
 
-/* */
 body {
-  font-family: sans-serif;
-  width: 1000px;
+  font-family: 'Raleway', sans-serif;
+  width: 960px;
   margin: auto;
-  padding: 20px 20px 50px 20px;
+  padding: 0 20px 50px 20px;
+  background: #eee;
 }
 
-.profile-sidebar {
-  padding: 10px;
-  width: 200px;
-  border: 1px solid green;
+img {
+  border-radius: 4px;
+}
+/* ----------------------------------------------------- */
+/* MAIN AREAS */
+
+#main-content {
+  background: #fff;
+  padding: 0 20px 50px 20px;
 }
 
-.profile-frame {
-  width: 190px;
-  height: 190px;
-  margin: auto;
-  margin-bottom: 10px;
-  border: 1px solid skyblue;
-}
-
-.top-nav {
+.top-banner {
   z-index: 5;
-  padding: 10px;
+  padding-top: 10px;
+/*  padding: 10px 0;*/
   background: #fff;
   display: block;
-  box-shadow: 0 1px 2px #333;
+  border-bottom: 1px solid #ccc;
+/*  box-shadow: 0 1px 2px #333;*/
 }
 
-.posts {
+
+.project-sidebar {
+  padding-top: 10px;
+  width: 120px;
+/*  border-right: 1px solid green;*/
+}
+
+.content {
+  margin-top: 36px;
   width: 500px;
   padding: 10px;
-/*  border: 1px solid blue;*/
-/*  background: blue;*/
 }
+
+#features {
+  padding-top: 10px;
+}
+
+#languages {
+  padding-top: 10px;
+/*  position: relative;*/
+  width: 110px;
+/*  right: 20px;*/
+/*  border-right: 1px solid #ccc;*/
+}
+
+#technology {
+  padding-top: 10px;
+/*  position: relative;*/
+/*  right: 12px;*/
+/*  margin-top: 5px;*/
+  z-index: 0;
+  width: 120px;
+  background: #fff;
+/*  border: 1px solid purple;*/
+/*  box-shadow: -2px 0 2px 0 #666;*/
+/*  border-left: 1px solid #333;*/
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  height: 30px;
+  background: #fff;
+}
+
+
+h3.title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* ----------------------------------------------------- */
+/* TOP BANNER */
+
+.profile-logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-nav ul {
+  float: right;
+}
+
+.top-nav ul li {
+  float: left;
+}
+
+
 
 .top-nav a {
   font-weight: bold;
@@ -76,11 +142,40 @@ body {
   text-spacing: 4px;
 }
 
-.post {
+/* ----------------------------------------------------- */
+/* PROJECT SIDEBAR */
+
+
+
+img.project-thumb {
+/*  margin: 5px 5px 5px 0;
+  margin-left: 10px;*/
+  width: 50px;
+  margin: 0 10px 10px 0;
+}
+
+img.project-icon {
+/*  margin: 5px 5px 5px 0;
+  margin-left: 10px;*/
+  float: left;
+  width: 110px;
+  margin: 0 10px 10px 0;
+  border-radius: 8px;
+}
+
+/* ----------------------------------------------------- */
+/* CONTENT */
+
+.project-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*.post {
   padding: 10px;
   margin-top: 20px;
-/*  border-bottom: 1px solid #ccc;*/
-}
+}*/
 
 .post header {
   font-size: 16px;
@@ -89,10 +184,12 @@ body {
   border-bottom: 1px solid #aaa;
   margin-bottom: 10px;
 }
+
 .post-title.references {
 
 }
-.references li{
+
+.references li {
   float: left;
   padding-left: 10px;
 }
@@ -101,17 +198,12 @@ body {
   color: #555;
 }
 
-.post img {
-  margin-left: 10px;
-}
 
-#languages {
-/*  position: relative;*/
-  width: 110px;
-/*  right: 20px;*/
-/*  border-right: 1px solid #ccc;*/
-}
 
+
+
+/* ----------------------------------------------------- */
+/* FEATURES */
 
 .language {
 /*  font-weight: bold;*/
@@ -123,6 +215,12 @@ body {
   box-shadow: -2px 2px 2px #aaa;
   margin: 5px 0;
 }
+
+.tech {
+  padding-top: 4px;
+  font-size: 14px;
+}
+
 
 .ruby {
   color: #fff;
@@ -153,21 +251,6 @@ body {
   opacity: 0.3;
 }
 
-#features {
-  position: relative;
-  right: 12px;
-  margin-top: 5px;
-  z-index: 0;
-  width: 120px;
-  background: #fff;
-/*  border: 1px solid purple;*/
-  padding: 0 10px;
-  box-shadow: -2px 0 2px 0 #666;
-  border-left: 1px solid #333;
-}
 
-.feature {
-  padding: 6px 0;
-  font-size: 12px;
-  margin: 5px 0;
-}
+
+
