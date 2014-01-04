@@ -91,7 +91,7 @@ footer {
 /*  border-right: 1px solid green;*/
 }
 
-.content {
+#content {
   margin-top: 36px;
   width: 500px;
   padding: 10px;
@@ -102,7 +102,7 @@ footer {
 }
 
 #languages {
-/*  position: relative;*/
+  position: relative;
 /*  width: 110px;*/
 /*  right: 20px;*/
 /*  border-right: 1px solid #ccc;*/
@@ -110,7 +110,7 @@ footer {
 }
 
 #technology {
-/*  position: relative;*/
+  position: relative;
 /*  right: 12px;*/
 /*  margin-top: 5px;*/
   margin: 10px 0 0 10px;
@@ -162,10 +162,17 @@ img.project-thumb {
 /*  margin: 5px 5px 5px 0;
   margin-left: 10px;*/
   width: 50px;
-  margin: 0 10px 10px 0;
+/*  padding: 0 10px 10px 0; */
+  margin: 0 6px 6px 0;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-img.project-icon {
+img.project-thumb:hover {
+  border: 1px solid red;
+}
+
+#project-icon {
 /*  margin: 5px 5px 5px 0;
   margin-left: 10px;*/
   float: left;
@@ -177,16 +184,16 @@ img.project-icon {
 /* ----------------------------------------------------- */
 /* CONTENT */
 
-.content-title {
+#content-title {
   margin-bottom: 10px;
 }
 
-.content-title h3 {
+#content-title h3 {
   display: inline;
   text-align: left;
 }
 
-.content-title a {
+#content-title a {
   float: right;
   padding: 10px 0 0 20px;
   text-align: right;
@@ -198,64 +205,78 @@ img.project-icon {
   display: inline;
 }
 
-.content p {
+#content p {
   color: #555;
   text-align: justify;
 }
 
+.hidden {
+  display: none;
+}
 
 /* ----------------------------------------------------- */
 /* FEATURES */
 
 .language {
+  left: 0px;
+  top: 0px;
+  position: relative;
   font-weight: bold;
   text-shadow: 0 1px 1px #aaa;
   color: #fff;
-  background: #fff;
+  background: transparent;
   text-align: center;
   padding: 6px 0;
   font-size: 12px;
   width: 100px;
-/*  box-shadow: -1px 1px 1px #aaa;*/
+  box-shadow: -1px 1px 1px #aaa;
   margin-bottom: 5px;
 }
 
 .tech {
+  position: relative;
+  top: 0px;
   padding-bottom: 4px;
   font-size: 14px;
+  text-shadow: 0 1px 1px #aaa;
 }
 
 
 .ruby {
   color: #FF2626;
-  border: 1px solid #FF2626;
+  border-bottom: 1px solid #FF2626;
+  border-left: 1px solid #FF2626;
 /*  background: #F7977A;*/
 /*  background: #FF7575;*/
 }
 
 .sql {
   color: #872187;
-  border: 1px solid #872187;
+  border-bottom: 1px solid #872187;
+  border-left: 1px solid #872187;
 /*  background: #AD8BFE;*/
 /*  background: #A187BE;*/
 }
 
 .js {
   color: #2966B8;
-  border: 1px solid #2966B8;
+  border-left: 1px solid #2966B8;
+  border-bottom: 1px solid #2966B8;
 /*  background: #82CA9D;*/
 }
 
 .web {
   color: #FF800D;
-  border: 1px solid #FF800D;
+  border-left: 1px solid #FF800D;
+  border-bottom: 1px solid #FF800D;
 /*  background: #F9AD81;*/
 /*  background: #FF9C4A;*/
 }
 
 .lua {
   color: #59955C;
-  border: 1px solid #59955C;
+  border-bottom: 1px solid #59955C;
+  border-left: 1px solid #59955C;
 /*  background: #7EA7D8;*/
 }
 

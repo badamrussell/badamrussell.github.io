@@ -7,8 +7,6 @@
 </head>
 
 <body>
-
-
   <header class="top-banner group">
       <p class="profile-logo left">B.AdamRussell</p>
 
@@ -34,28 +32,80 @@
   <div id="main-content" class="group">
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
-    <img class="project-icon right" src="images/asteroids_sample.png">
+    <img id="project-icon" data-id="1" class="right" src="images/asteroids_sample.png">
     <ul>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="2" src="images/brainGemsIcon.png"></li>
+      <li><img class="project-thumb left" data-id="3" src="images/moviesStarsIcon.png"></li>
+      <li><img class="project-thumb left" data-id="4" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="5" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="6" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="7" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="8" src="images/asteroids_sample.png"></li>
     </ul>
   </section>
 
-  <section class="content left">
-    <div class="content-title group">
-      <h3 class="project-title left">Asteroids</h3>
-      <a href="#">code</a>
-      <a href="#">website</a>
-    </div>
+  <section id="content" class="left">
+    <article id="1">
+
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+        <input type="hidden" value="CSS">
+        <input type="hidden" value="SQL">
+        <input type="hidden" value="RSPEC">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="AWS">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Asteroids</h3>
+        <a href="#">code</a>
+        <a href="#">website</a>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="2" class="hidden">
+
+      <div class="languages-used">
+        <input type="hidden" value="JAVASCRIPT">
+        <input type="hidden" value="LUA">
+        <input type="hidden" value="HTML">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="Canvas">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Brain Gems</h3>
+        <a href="#">code</a>
+        <a href="#">website</a>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="3" class="hidden">
+
+      <div class="languages-used">
+        <input type="hidden" value="JQUERY">
+        <input type="hidden" value="CSS">
+        <input type="hidden" value="HTML">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="OAuth">
+      </div>
 
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="content-title group">
+        <h3 class="project-title left">Movies & Stars</h3>
+        <a href="#">code</a>
+        <a href="#">website</a>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
 
   </section>
 
@@ -67,14 +117,14 @@
       <div class="language sql">SQL</div>
       <div class="language sql">POSTGRES</div>
       <div class="language sql">SQLITE</div>
-      <div class="language js">JS</div>
+      <div class="language js">JAVASCRIPT</div>
       <div class="language ruby">RAILS</div>
       <div class="language js inactive">BACKBONE.JS</div>
       <div class="language web">HTML</div>
       <div class="language web">CSS</div>
       <div class="language ruby inactive">RSPEC</div>
-      <div class="language lua">Lua</div>
-      <div class="language lua inactive">CoronaSDK</div>
+      <div class="language lua">LUA</div>
+      <div class="language lua inactive">CORONASDK</div>
     </section>
 
     <section id="technology" class="left">
@@ -90,5 +140,97 @@
 </div>
 
 <footer></footer>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+  var sortElements = function(allEls, inputEls, offset, $mainEl) {
+    var values = [];
+    for (var i=0; i < inputEls.length; i++) {
+      values[values.length] = $(inputEls[i]).val();
+    }
+
+    var activeIndex = 0;
+    var inactiveIndex = values.length;
+    var activeEls = [];
+    var inactiveEls = [];
+    var reset = true;
+
+
+
+
+
+    for (var i=0; i < allEls.length; i++) {
+      var $el = $(allEls[i]);
+      var nextIndex = inactiveIndex;
+      var isActive = false;
+
+      if (values.length > 0) {
+        for (var j=0; j < values.length; j++) {
+          if (values[j] == $el.text()) {
+            $el.removeClass("inactive");
+            values.splice(j, 1);
+
+            nextIndex = activeIndex;
+            isActive = true;
+            activeIndex += 1;
+            inactiveIndex -= 1;
+            break;
+          }
+        }
+      }
+
+      var newTop = (nextIndex - i) * offset;
+
+      if (isActive) {
+        activeEls[activeEls.length] = $el.clone();
+      } else {
+        inactiveEls[inactiveEls.length] = $el.clone();
+      }
+
+      $el.animate({top: "+=" + newTop}, "slow", function() {
+        if (reset) {
+          reset = false;
+          $mainEl.empty();
+          var els = activeEls.concat(inactiveEls);
+          for (var i=0; i < els.length; i++) {
+            $mainEl.append(els[i])
+          }
+
+        }
+      });
+
+      inactiveIndex += 1;
+    }
+  }
+
+  $(function() {
+    $(".project-sidebar").click("project-thumb", function(event) {
+      var $target = $(event.target);
+      var $article = $("#" + $target.data("id"));
+      var $icon = $("#project-icon");
+
+      $("article").addClass("hidden");
+      $(".language").addClass("inactive");
+      $(".tech").addClass("inactive");
+
+      $article.removeClass();
+
+      var iconSrc = $icon.attr("src");
+      var iconID = $icon.data("id");
+      $icon.attr("src", $target.attr("src"));
+      $target.attr("src", iconSrc);
+      $icon.data("id", $target.data("id"));
+      $target.data("id", iconID);
+
+
+      sortElements($(".language"), $article.find(".languages-used input"), 32, $("#languages"))
+
+      sortElements($(".tech"), $article.find(".techs-used input"), 20, $("#technology"))
+    });
+  });
+
+</script>
 </body>
 </html>
+
