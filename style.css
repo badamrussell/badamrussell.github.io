@@ -18,6 +18,7 @@ ul {
 }
 
 a {
+  color: #1e90ff;
   text-decoration: none;
 }
 
@@ -38,6 +39,7 @@ a {
 body {
   font-family: 'Raleway', sans-serif;
   margin: auto;
+  color: #555;
   background: #333;
 }
 
@@ -93,8 +95,8 @@ footer {
 
 #content {
   margin-top: 36px;
-  width: 500px;
-  padding: 10px;
+  width: 480px;
+  padding: 10px 20px;
 }
 
 #features {
@@ -184,11 +186,11 @@ img.project-thumb:hover {
 /* ----------------------------------------------------- */
 /* CONTENT */
 
-#content-title {
+.content-title {
   margin-bottom: 10px;
 }
 
-#content-title h3 {
+.content-title h3 {
   display: inline;
   text-align: left;
 }
@@ -199,15 +201,37 @@ img.project-thumb:hover {
   text-align: right;
 }
 
-.project-title {
+#content h3.project-title {
   font-size: 26px;
   font-weight: bold;
   display: inline;
+  border-bottom: 0;
 }
 
 #content p {
   color: #555;
   text-align: justify;
+  margin: 10px 0;
+}
+
+#content ul {
+  margin-top: 10px;
+}
+
+#content li {
+  margin-bottom: 15px;
+  text-align:justify;
+}
+
+.content-title {
+
+}
+
+#content h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px solid #ccc;
 }
 
 .hidden {

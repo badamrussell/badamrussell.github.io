@@ -48,13 +48,11 @@
     <article id="1">
 
       <div class="languages-used">
-        <input type="hidden" value="RUBY">
-        <input type="hidden" value="CSS">
-        <input type="hidden" value="SQL">
-        <input type="hidden" value="RSPEC">
+        <input type="hidden" value="HTML">
+        <input type="hidden" value="JAVASCRIPT">
       </div>
       <div class="techs-used">
-        <input type="hidden" value="AWS">
+        <input type="hidden" value="Canvas">
       </div>
 
       <div class="content-title group">
@@ -69,12 +67,15 @@
     <article id="2" class="hidden">
 
       <div class="languages-used">
-        <input type="hidden" value="JAVASCRIPT">
         <input type="hidden" value="LUA">
-        <input type="hidden" value="HTML">
+        <input type="hidden" value="CORONASDK">
       </div>
+
       <div class="techs-used">
-        <input type="hidden" value="Canvas">
+        <input type="hidden" value="OAuth">
+        <input type="hidden" value="Facebook">
+        <input type="hidden" value="Amazon">
+        <input type="hidden" value="iTunes">
       </div>
 
       <div class="content-title group">
@@ -89,12 +90,12 @@
     <article id="3" class="hidden">
 
       <div class="languages-used">
-        <input type="hidden" value="JQUERY">
-        <input type="hidden" value="CSS">
-        <input type="hidden" value="HTML">
+        <input type="hidden" value="LUA">
+        <input type="hidden" value="CORONASDK">
       </div>
+
       <div class="techs-used">
-        <input type="hidden" value="OAuth">
+        <input type="hidden" value="iTunes">
       </div>
 
 
@@ -135,6 +136,9 @@
       <div class="tech">Canvas</div>
       <div class="tech">GIT</div>
       <div class="tech inactive">TDD</div>
+      <div class="tech inactive">Amazon</div>
+      <div class="tech inactive">iTunes</div>
+      <div class="tech inactive">Facebook</div>
     </section>
   </section>
 </div>
@@ -142,6 +146,7 @@
 <footer></footer>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 
 <script>
   var sortElements = function(allEls, inputEls, offset, $mainEl) {
@@ -184,7 +189,7 @@
         inactiveEls[inactiveEls.length] = $el.clone();
       }
 
-      $el.animate({top: "+=" + newTop}, "slow", function() {
+      $el.animate({top: "+=" + newTop}, "slow", "swing", function() {
         if (reset) {
           reset = false;
           $mainEl.empty();
