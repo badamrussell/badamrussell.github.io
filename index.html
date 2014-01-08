@@ -37,9 +37,7 @@
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
 
-    <div id="project-icon" class="group">
-      <img data-id="3" src="images/railsLite.png">
-    </div>
+    <img id="project-icon" data-id="3" src="images/railsLite.png">
 
     <ul id="project-thumbnails" class="group">
       <li><img class="project-thumb left" data-id="2" src="images/tree.png"></li>
@@ -509,7 +507,6 @@
       var $target = $(event.target);
       var $article = $("#" + $target.data("id"));
       var $icon = $("#project-icon");
-      var $iconImg = $("#project-icon img")
       $("article").addClass("hidden");
       $(".language").addClass("inactive");
       $(".tech").addClass("inactive");
@@ -519,7 +516,7 @@
 
       var iconSrc = $icon.attr("src");
       var iconID = $icon.data("id");
-      $iconImg.attr("src", $target.attr("src"));
+      $icon.attr("src", $target.attr("src"));
       $target.attr("src", iconSrc);
       $icon.data("id", $target.data("id"));
       $target.data("id", iconID);

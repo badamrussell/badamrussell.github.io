@@ -196,9 +196,6 @@ img.project-thumb:hover {
 }
 
 #project-icon {
-}
-
-#project-icon img {
   margin: 10px auto;
 
   float: left;
@@ -340,30 +337,22 @@ button.restart {
 
 .ruby {
   background: #FF2626;
-/*  background: #F7977A;*/
-/*  background: #FF7575;*/
 }
 
 .sql {
   background: #872187;
-/*  background: #AD8BFE;*/
-/*  background: #A187BE;*/
 }
 
 .js {
   background: #2966B8;
-/*  background: #82CA9D;*/
 }
 
 .web {
   background: #FF800D;
-/*  background: #F9AD81;*/
-/*  background: #FF9C4A;*/
 }
 
 .lua {
   background: #59955C;
-/*  background: #7EA7D8;*/
 }
 
 .inactive {
