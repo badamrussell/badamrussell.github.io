@@ -14,18 +14,21 @@
         <ul>
           <li>
             <a href="http://www.linkedin.com/in/badamrussell">
-              <img src="images/indeed.png" alt="View B. Adam Russell's LinkedIn profile" style="vertical-align:middle">
               <img src="images/menu_linkedin.png" alt="View B. Adam Russell's LinkedIn profile" style="vertical-align:middle">
             </a>
           </li>
 
           <li>
             <a href="http://github.com/badamrussell">
-              <img src="images/blacktocat-32.png" alt="View B. Adam Russell's Github profile" width="32" height="32" alt="Blacktocat 32">
+              <img src="images/menu_github1.png" height="30" alt="View B. Adam Russell's Github profile">
             </a>
           </li>
 
-          <li><a class="text-link" href="#">email</a></li>
+          <li>
+            <a href="mailto:b.ad.russell@gmail.com">
+              <img src="images/menu_email.png" height="30" alt="email B. Adam Russell">
+            </a>
+          </li>
         </ul>
       </nav>
   </header>
@@ -33,8 +36,12 @@
   <div id="main-content" class="group">
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
-    <img id="project-icon" data-id="3" class="right" src="images/railsLite.png">
-    <ul>
+
+    <div id="project-icon" class="group">
+      <img data-id="3" src="images/railsLite.png">
+    </div>
+
+    <ul id="project-thumbnails" class="group">
       <li><img class="project-thumb left" data-id="2" src="images/tree.png"></li>
       <li><img class="project-thumb left" data-id="1" src="images/maze.png"></li>
       <li><img class="project-thumb left" data-id="4" src="images/poker.png"></li>
@@ -52,11 +59,9 @@
 
     <article id="1" class="hidden">
       <div class="languages-used">
-        <input type="hidden" value="HTML">
         <input type="hidden" value="RUBY">
       </div>
       <div class="techs-used">
-        <input type="hidden" value="ERB">
       </div>
 
       <div class="content-title group">
@@ -492,7 +497,7 @@
       $target.data("id", iconID);
 
 
-      sortElements($(".language"), $article.find(".languages-used input"), 40, $("#languages"))
+      sortElements($(".language"), $article.find(".languages-used input"), 39, $("#languages"))
 
       sortElements($(".tech"), $article.find(".techs-used input"), 20, $("#technology"))
     });
