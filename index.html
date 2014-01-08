@@ -46,7 +46,7 @@
       <li><img class="project-thumb left" data-id="1" src="images/maze.png"></li>
       <li><img class="project-thumb left" data-id="4" src="images/poker.png"></li>
       <li><img class="project-thumb left" data-id="5" src="images/yolp.png"></li>
-      <li><img class="project-thumb left" data-id="6" src="images/queens.png"></li>
+      <li><img class="project-thumb left" data-id="6" src="images/queen.png"></li>
       <li><img class="project-thumb left" data-id="7" src="images/knight.png"></li>
       <li><img class="project-thumb left" data-id="8" src="images/chess.png"></li>
       <li><img class="project-thumb left" data-id="11" src="images/asteroids.png"></li>
@@ -353,13 +353,22 @@
 
       <div class="content-title group">
         <h3 class="project-title left">Asteroids</h3>
-        <a href="">website</a>
-        <a href="">code</a>
+        <a href="asteroids/asteroids.html">website</a>
+        <a href="https://github.com/badamrussell/asteroids">code</a>
       </div>
 
       <p>
         The classic game of asteroids is brought back through the power of Javascript and the HTML5 canvas.
       </p>
+
+      <noscript>
+
+      </noscript>
+
+      <canvas width="400" height="400"></canvas>
+
+
+      <button type="button" class="restart" onclick="game.restart()">RESTART</button>
     </article>
 
 
@@ -418,6 +427,24 @@
 <footer></footer>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script src="asteroids/lib/tools.js"></script>
+<script src="asteroids/lib/keymaster.js"></script>
+<script src="asteroids/game.js"></script>
+<script src="asteroids/moving_object.js"></script>
+<script src="asteroids/asteroid.js"></script>
+<script src="asteroids/ship.js"></script>
+<script src="asteroids/bullet.js"></script>
+<script src="asteroids/debris.js"></script>
+
+<script>
+    var canvas = document.getElementsByTagName("canvas")[0];
+    var ctx = canvas.getContext("2d");
+    var game = new Asteroids.Game(ctx);
+    game.start();
+</script>
+
 
 
 <script>
@@ -482,16 +509,17 @@
       var $target = $(event.target);
       var $article = $("#" + $target.data("id"));
       var $icon = $("#project-icon");
-
+      var $iconImg = $("#project-icon img")
       $("article").addClass("hidden");
       $(".language").addClass("inactive");
       $(".tech").addClass("inactive");
 
       $article.removeClass();
 
+
       var iconSrc = $icon.attr("src");
       var iconID = $icon.data("id");
-      $icon.attr("src", $target.attr("src"));
+      $iconImg.attr("src", $target.attr("src"));
       $target.attr("src", iconSrc);
       $icon.data("id", $target.data("id"));
       $target.data("id", iconID);
@@ -504,6 +532,9 @@
   });
 
 </script>
+
+
+
 </body>
 </html>
 

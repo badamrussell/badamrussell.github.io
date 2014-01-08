@@ -47,6 +47,11 @@ img {
   border-radius: 4px;
 }
 
+canvas {
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+}
 /* ----------------------------------------------------- */
 /* GENERAL POSITIONAL WRAPPERS */
 
@@ -100,6 +105,7 @@ footer {
   background: #fff;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 4px #333;
+  min-height: 510px;
 }
 
 #features {
@@ -190,17 +196,16 @@ img.project-thumb:hover {
 }
 
 #project-icon {
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 8px 0 0 8px;
-  box-shadow: 0 1px 6px #333;
 }
 
 #project-icon img {
+  margin: 10px auto;
+
   float: left;
   display: block;
   border: 4px solid #fff;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #333;
 }
 
 
@@ -218,6 +223,21 @@ img.project-thumb:hover {
 
 /* ----------------------------------------------------- */
 /* CONTENT */
+
+button.restart {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 0 0 2px #333;
+  display: block;
+  width: 200px;
+  padding: 10px 20px;
+  margin: auto;
+  cursor: pointer;
+  background: #ffa500;
+  border: 1px solid #333;
+  box-shadow: 0 1px 2px #333;
+}
 
 .content-title {
   margin-bottom: 10px;
