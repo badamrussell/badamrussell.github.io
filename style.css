@@ -95,7 +95,7 @@ footer {
 
 #content {
   margin-top: 36px;
-  width: 480px;
+  width: 470px;
   padding: 10px 20px;
 }
 
@@ -168,6 +168,7 @@ img.project-thumb {
   margin: 0 6px 6px 0;
   border: 1px solid transparent;
   cursor: pointer;
+  box-shadow: 0 1px 4px #333;
 }
 
 img.project-thumb:hover {
@@ -180,7 +181,9 @@ img.project-thumb:hover {
   float: left;
   width: 110px;
   margin: 10px 10px 10px 0;
+  border: 2px solid transparent;
   border-radius: 8px;
+  box-shadow: 0 1px 6px #333;
 }
 
 /* ----------------------------------------------------- */
@@ -241,7 +244,7 @@ img.project-thumb:hover {
 /* ----------------------------------------------------- */
 /* FEATURES */
 
-.language {
+.languageOLD {
   left: 0px;
   top: 0px;
   position: relative;
@@ -257,50 +260,59 @@ img.project-thumb:hover {
   margin-bottom: 5px;
 }
 
+.language {
+  left: 0px;
+  top: 0px;
+  position: relative;
+  font-weight: bold;
+
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  text-shadow: -1px 1px 2px #333;
+
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  width: 100px;
+  box-shadow: -1px 2px 3px #aaa;
+  margin-bottom: 10px;
+}
+
 .tech {
   position: relative;
   top: 0px;
   padding-bottom: 4px;
   font-size: 14px;
-  text-shadow: 0 1px 1px #aaa;
+  text-shadow: -1px 1px 1px #aaa;
 }
 
 
 .ruby {
-  color: #FF2626;
-  border-bottom: 1px solid #FF2626;
-  border-left: 1px solid #FF2626;
+  background: #FF2626;
 /*  background: #F7977A;*/
 /*  background: #FF7575;*/
 }
 
 .sql {
-  color: #872187;
-  border-bottom: 1px solid #872187;
-  border-left: 1px solid #872187;
+  background: #872187;
 /*  background: #AD8BFE;*/
 /*  background: #A187BE;*/
 }
 
 .js {
-  color: #2966B8;
-  border-left: 1px solid #2966B8;
-  border-bottom: 1px solid #2966B8;
+  background: #2966B8;
 /*  background: #82CA9D;*/
 }
 
 .web {
-  color: #FF800D;
-  border-left: 1px solid #FF800D;
-  border-bottom: 1px solid #FF800D;
+  background: #FF800D;
 /*  background: #F9AD81;*/
 /*  background: #FF9C4A;*/
 }
 
 .lua {
-  color: #59955C;
-  border-bottom: 1px solid #59955C;
-  border-left: 1px solid #59955C;
+  background: #59955C;
 /*  background: #7EA7D8;*/
 }
 

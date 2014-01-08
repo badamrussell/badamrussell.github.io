@@ -8,13 +8,14 @@
 
 <body>
   <header class="top-banner group">
-      <p class="profile-logo left">B.AdamRussell</p>
+      <p class="profile-logo left"><img height="30" src="images/menu_name.png"></p>
 
       <nav class="top-nav right">
         <ul>
           <li>
             <a href="http://www.linkedin.com/in/badamrussell">
               <img src="images/indeed.png" alt="View B. Adam Russell's LinkedIn profile" style="vertical-align:middle">
+              <img src="images/menu_linkedin.png" alt="View B. Adam Russell's LinkedIn profile" style="vertical-align:middle">
             </a>
           </li>
 
@@ -32,24 +33,314 @@
   <div id="main-content" class="group">
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
-    <img id="project-icon" data-id="1" class="right" src="images/asteroids_sample.png">
+    <img id="project-icon" data-id="3" class="right" src="images/railsLite.png">
     <ul>
-      <li><img class="project-thumb left" data-id="2" src="images/brainGemsIcon.png"></li>
-      <li><img class="project-thumb left" data-id="3" src="images/moviesStarsIcon.png"></li>
-      <li><img class="project-thumb left" data-id="4" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" data-id="5" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" data-id="6" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" data-id="7" src="images/asteroids_sample.png"></li>
-      <li><img class="project-thumb left" data-id="8" src="images/asteroids_sample.png"></li>
+      <li><img class="project-thumb left" data-id="2" src="images/tree.png"></li>
+      <li><img class="project-thumb left" data-id="1" src="images/maze.png"></li>
+      <li><img class="project-thumb left" data-id="4" src="images/poker.png"></li>
+      <li><img class="project-thumb left" data-id="5" src="images/yolp.png"></li>
+      <li><img class="project-thumb left" data-id="6" src="images/queens.png"></li>
+      <li><img class="project-thumb left" data-id="7" src="images/knight.png"></li>
+      <li><img class="project-thumb left" data-id="8" src="images/chess.png"></li>
+      <li><img class="project-thumb left" data-id="11" src="images/asteroids.png"></li>
+      <li><img class="project-thumb left" data-id="9" src="images/brainGemsIcon.png"></li>
+      <li><img class="project-thumb left" data-id="10" src="images/moviesStarsIcon.png"></li>
     </ul>
   </section>
 
   <section id="content" class="left">
-    <article id="1">
 
+    <article id="1" class="hidden">
       <div class="languages-used">
         <input type="hidden" value="HTML">
+        <input type="hidden" value="RUBY">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="ERB">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Maze Escape</h3>
+        <a href="https://github.com/badamrussell/maze">code</a>
+      </div>
+
+      <p>
+        Finding the shortest path through a maze.
+      </p>
+      <p>
+        This code uses the A* algorithm to determine the shortest path.
+        The A* algorithm was a good approach because it allows the program to explore all movement options, while giving the more promising moves more priority.
+        Also, doing it this way, the first path that is found will be one of the shortest paths, so the search can immediately end.
+
+        <h3>The most important bits for this algorithm were:</h3>
+        <ul>
+          <li>
+            The Manhattan value of each move. Manhattan values are calculated by adding the total number of steps to reach a ceratin space and a estimate distance to the end.
+          </li>
+          <li>
+            The estimated distance assumes there are no walls, so it is just the direct number of spaces to the end position from the current position.
+          </li>
+          <li>
+            Ignoring the previous position. For determining the next set of possible moves, ignoring the previous position greatly reduces the amount of retreading.
+          </li>
+        </ul>
+      </p>
+    </article>
+
+    <article id="2" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="HTML">
+        <input type="hidden" value="RUBY">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="ERB">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Tree Search</h3>
+        <a href="https://github.com/badamrussell/tree">code</a>
+      </div>
+
+      <p>
+        An exercise into building a Custom Tree Node class for Tree Search searching using recursion.
+      </p>
+        <p>
+        Like a binary tree, but here you can specify the number of children for each node (so it doesn't have to be 2). This can be used for Breadth-First-Search (BFS) and Depth-First-Search (DFS).
+      </p>
+    </article>
+
+    <article id="3">
+      <div class="languages-used">
+        <input type="hidden" value="HTML">
+        <input type="hidden" value="RUBY">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="ERB">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Diet Rails</h3>
+        <a href="https://github.com/badamrussell/rails_lite">code</a>
+      </div>
+
+      <p>
+        Generally, a good way to have a better understanding of something is to take it apart and try to rebuild it.
+        Sure you might end up with some extra parts, not have nearly as much functionality, and will never use it for any practical purposes... but you end up feeling a wee bit smarter.
+
+        <ul>
+          <li>
+            <h3>Session Class</h3>
+            Provides methods to store and set cookies and the authenticity tokens for CSRF.
+          </li>
+          <li>
+            <h3>URLHelper Module</h3>
+            Dynamically creates helper methods to generate urls.
+          </li>
+          <li>
+            <h3>Router Class</h3>
+            Handles nested routes and sets up regular expressions to match against urls.
+          </li>
+          <li>
+            <h3>Params Class</h3>
+            Stores passed parameters.
+          </li>
+          <li>
+            <h3>HTMLHelper Module</h3>
+            Convenience methods for creating links and buttons.
+          </li>
+          <li>
+            <h3>Flash Class</h3>
+            Provides access to a hash that can be set on one page and retrieved on the next.
+          </li>
+          <li>
+            <h3>BaseController Class</h3>
+            Provides various render, redirect, flash and interfaces with instances of the other classes.
+            It uses the ERB class along with Ruby's binding class to generate rendered content. The binding allows access to all of of methods and variables of the controller instance to be used in the ERB rendering.
+          </li>
+        </ul>
+      </p>
+    </article>
+
+    <article id="4" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+        <input type="hidden" value="RSPEC">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="TDD">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Poker</h3>
+        <a href="https://github.com/badamrussell/poker">code</a>
+      </div>
+
+      <p>
+        Poker developed for the Terminal using Ruby and TDD.
+      </p>
+      <p>
+        The game supports up to 4 players.
+      </p>
+      <p>
+        Rounds of betting continue until all players have folded, or matched bets.
+      </p>
+      <p>
+        The program can determine the highest value of a particular hand, give the name of it (like "Royal Flush" or "Two Pair") and calculates a numerical value for the hand, so it can break ties.
+      </p>
+    </article>
+
+    <article id="5" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+        <input type="hidden" value="RSPEC">
+        <input type="hidden" value="HTML">
+        <input type="hidden" value="JQUERY">
+        <input type="hidden" value="SQL">
+        <input type="hidden" value="POSTGRES">
         <input type="hidden" value="JAVASCRIPT">
+        <input type="hidden" value="RAILS">
+        <input type="hidden" value="CSS">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="ERB">
+        <input type="hidden" value="UJS">
+        <input type="hidden" value="Google Maps">
+        <input type="hidden" value="AWS">
+        <input type="hidden" value="GIT">
+        <input type="hidden" value="TDD">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Yolp (yelp clone)</h3>
+        <a href="https://github.com/badamrussell/yelpClone">code</a>
+      </div>
+
+      <p>
+        Poker developed for the Terminal using Ruby and TDD.
+      </p>
+    </article>
+
+    <article id="6" class="hidden">
+
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+      </div>
+      <div class="techs-used">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Queens</h3>
+        <a href="https://github.com/badamrussell/queens">code</a>
+      </div>
+
+      <p>
+        Set up 8 queens on a chessboard so that none of them check each other.
+      </p>
+      <p>
+        This classic problem was interesting to solve recursively. Each recursive iteration needed to have several individual branches to explore all of the possibilities. Currently the code stops once it finds the first solution.
+      </p>
+    </article>
+
+    <article id="7" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+        <input type="hidden" value="RSPEC">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="TDD">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Knight Moves</h3>
+        <a href="https://github.com/badamrussell/knight">code</a>
+      </div>
+
+      <p>
+        Determine the least number of moves required to move a knight to another position on a chess board.
+      </p>
+      <p>
+        Uses a custom <a href="project-2.html">binary search tree</a> class I wrote to determine the correct sequence of moves.
+      </p>
+    </article>
+
+    <article id="8" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="RUBY">
+      </div>
+      <div class="techs-used">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Chess</h3>
+        <a href="https://github.com/badamrussell/chess">code</a>
+      </div>
+
+      <p>
+        A game of chess made for the terminal.
+      </p>
+
+      <p>
+        Includes checkmating, castling, en passant and custom error messages.
+      </p>
+    </article>
+
+    <article id="9" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="LUA">
+        <input type="hidden" value="CORONASDK">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="OAuth">
+        <input type="hidden" value="iTunes">
+        <input type="hidden" value="Amazon">
+        <input type="hidden" value="Facebook">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Brain Gems</h3>
+        <a href="https://itunes.apple.com/us/app/brain-gems-free-fun-addictive/id497715542?mt=8">website</a>
+      </div>
+
+      <p>
+        An original word game made for mobile devices.
+      </p>
+      <p>
+        A combination of a crossword and a word jumble, with the shape of the puzzle being a diamond. Each word in the puzzle has a clue and each neighboring answer share letters in common.
+      </p>
+      <p>
+        I did all of the front-end coding along with the graphics. The game was developed using CoronaSDK.
+      </p>
+    </article>
+
+    <article id="10" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="LUA">
+        <input type="hidden" value="CORONASDK">
+      </div>
+      <div class="techs-used">
+        <input type="hidden" value="iTunes">
+      </div>
+
+      <div class="content-title group">
+        <h3 class="project-title left">Movies & Stars</h3>
+        <a href="https://itunes.apple.com/us/app/movies-stars-fun-movie-trivia/id639768333?mt=8">website</a>
+      </div>
+
+      <p>
+        An original movie-trivia game made for mobile devices.
+      </p>
+      <p>
+        Need to place actors and movies into puzzle, so that actors only connect to movies that they were in.
+      </p>
+      <p>
+        I did all of the front-end coding along with the graphics. The game was developed using CoronaSDK.
+      </p>
+    </article>
+
+    <article id="11" class="hidden">
+      <div class="languages-used">
+        <input type="hidden" value="JAVASCRIPT">
+        <input type="hidden" value="HTML">
       </div>
       <div class="techs-used">
         <input type="hidden" value="Canvas">
@@ -57,56 +348,31 @@
 
       <div class="content-title group">
         <h3 class="project-title left">Asteroids</h3>
-        <a href="#">code</a>
-        <a href="#">website</a>
+        <a href="">website</a>
+        <a href="">code</a>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        The classic game of asteroids is brought back through the power of Javascript and the HTML5 canvas.
+      </p>
     </article>
 
-    <article id="2" class="hidden">
-
-      <div class="languages-used">
-        <input type="hidden" value="LUA">
-        <input type="hidden" value="CORONASDK">
-      </div>
-
-      <div class="techs-used">
-        <input type="hidden" value="OAuth">
-        <input type="hidden" value="Facebook">
-        <input type="hidden" value="Amazon">
-        <input type="hidden" value="iTunes">
-      </div>
-
-      <div class="content-title group">
-        <h3 class="project-title left">Brain Gems</h3>
-        <a href="#">code</a>
-        <a href="#">website</a>
-      </div>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </article>
-
-    <article id="3" class="hidden">
-
-      <div class="languages-used">
-        <input type="hidden" value="LUA">
-        <input type="hidden" value="CORONASDK">
-      </div>
-
-      <div class="techs-used">
-        <input type="hidden" value="iTunes">
-      </div>
 
 
-      <div class="content-title group">
-        <h3 class="project-title left">Movies & Stars</h3>
-        <a href="#">code</a>
-        <a href="#">website</a>
-      </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </section>
 
@@ -114,27 +380,28 @@
     <h3 class="title">features</h3>
     <section id="languages" class="left">
       <div class="language ruby">RUBY</div>
-      <div class="language js">JQUERY</div>
-      <div class="language sql">SQL</div>
-      <div class="language sql">POSTGRES</div>
-      <div class="language sql">SQLITE</div>
-      <div class="language js">JAVASCRIPT</div>
-      <div class="language ruby">RAILS</div>
-      <div class="language js inactive">BACKBONE.JS</div>
       <div class="language web">HTML</div>
-      <div class="language web">CSS</div>
+      <div class="language js inactive">JQUERY</div>
+      <div class="language sql inactive">SQL</div>
+      <div class="language sql inactive">POSTGRES</div>
+      <div class="language sql inactive">SQLITE</div>
+      <div class="language js inactive">JAVASCRIPT</div>
+      <div class="language ruby inactive">RAILS</div>
+      <div class="language js inactive">BACKBONE.JS</div>
+      <div class="language web inactive">CSS</div>
       <div class="language ruby inactive">RSPEC</div>
-      <div class="language lua">LUA</div>
+      <div class="language lua inactive">LUA</div>
       <div class="language lua inactive">CORONASDK</div>
     </section>
 
     <section id="technology" class="left">
-      <div class="tech">UJS</div>
-      <div class="tech inactive">Google Maps</div>
-      <div class="tech">OAuth</div>
-      <div class="tech">AWS</div>
-      <div class="tech">Canvas</div>
       <div class="tech">GIT</div>
+      <div class="tech">ERB</div>
+      <div class="tech inactive">UJS</div>
+      <div class="tech inactive">Google Maps</div>
+      <div class="tech inactive">OAuth</div>
+      <div class="tech inactive">AWS</div>
+      <div class="tech inactive">Canvas</div>
       <div class="tech inactive">TDD</div>
       <div class="tech inactive">Amazon</div>
       <div class="tech inactive">iTunes</div>
@@ -225,7 +492,7 @@
       $target.data("id", iconID);
 
 
-      sortElements($(".language"), $article.find(".languages-used input"), 32, $("#languages"))
+      sortElements($(".language"), $article.find(".languages-used input"), 40, $("#languages"))
 
       sortElements($(".tech"), $article.find(".techs-used input"), 20, $("#technology"))
     });
