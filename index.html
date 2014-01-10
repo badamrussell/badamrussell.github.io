@@ -359,14 +359,41 @@
         The classic game of asteroids is brought back through the power of Javascript and the HTML5 canvas.
       </p>
 
-      <noscript>
+      <section class="asteroids">
+        <noscript>
 
-      </noscript>
+        </noscript>
 
-      <canvas width="400" height="400"></canvas>
+        <canvas width="400" height="400"></canvas>
+        <section class="controls">
+          <table class="directions">
+              <tr>
+                  <td> &uarr; </td>
+                  <td>Move Forward</td>
+              </tr>
+              <tr>
+                  <td> &larr; </td>
+                  <td>Rotate Left</td>
+              </tr>
+              <tr>
+                  <td> &rarr; </td>
+                  <td>Rotate Right</td>
+              </tr>
+              <tr>
+                  <td>[spacebar]</td>
+                  <td>Fire</td>
+              </tr>
+              <tr>
+                  <td> P </td>
+                  <td>Pause/Play</td>
+              </tr>
+          </table>
 
-
-      <button type="button" class="restart" onclick="game.restart()">RESTART</button>
+          <div class="settings">
+              <button onclick="game.restart()">RESET GAME</button>
+          </div>
+        </section>
+      </section>
     </article>
 
 
@@ -439,10 +466,10 @@
 <script>
     var canvas = document.getElementsByTagName("canvas")[0];
     var ctx = canvas.getContext("2d");
-    var game = new Asteroids.Game(ctx);
+    var game = new Asteroids.Game(ctx, 400);
+    console.log(game)
     game.start();
 </script>
-
 
 
 <script>

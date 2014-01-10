@@ -1,18 +1,19 @@
 (function(root) {
   var Asteroids = root.Asteroids = ( root.Asteroids || {} );
 
-  var Game = Asteroids.Game = function(ctx) {
+  var Game = Asteroids.Game = function(ctx, width) {
     this.ctx = ctx;
     this.asteroids = [];
-    this.ship = new Asteroids.Ship([250,250]);
+    this.ship = new Asteroids.Ship([width/2,width/2]);
     this.timer;
     this.bullets = [];
     this.debris = [];
     this.background;
+
+    Game.DIM_X = width;
+    Game.DIM_Y = width;
   }
 
-  Game.DIM_X = 400;
-  Game.DIM_Y = 400;
   Game.FPS = 48;
   Game.Velocity = .5;
   Game.MaxAsteroids = 15;
@@ -51,7 +52,8 @@
   Game.prototype.displayPaused = function(ctx) {
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
-    ctx.fillText("PAUSED", Game.DIM_X / 2, Game.DIM_Y / 2);
+    ctx.fillText("PAUSED", Game.DIM_X / 2 - 40, Game.DIM_Y / 2);
+    ctx.fillText("PRESS 'P' TO PLAY", Game.DIM_X / 2 - 92, Game.DIM_Y / 2 + 30);
   }
 
   Game.prototype.draw = function() {
@@ -152,6 +154,10 @@
   }
 
   Game.prototype.step = function() {
+    if (Game.State == "paused") {
+      return false;
+    }
+
     if (Game.State == "play") {
       var asteroidIndex = this.checkCollisions();
 
@@ -174,15 +180,35 @@
     this.move();
     this.removeAsteroids()
     this.draw();
+
+    if (Game.State == "start") {
+      this.togglePause(ctx);
+    }
   }
 
+  Game.prototype.togglePause = function() {
+    if (Game.State == "play" || Game.State == "start") {
+      Game.State = "paused";
+      window.clearInterval(this.timer);
+      this.displayPaused(ctx);
+      this.timer = null;
+    } else if (Game.State == "paused") {
+      Game.State = "play";
+      var performStep = this.step.bind(this);
+      this.timer = window.setInterval( performStep , Game.FPS );
+    }
+  }
 
   Game.prototype.bindKeyHandlers = function(keyValue, keyAction) {
+    if (this.keysBound) { return false; }
     var that = this;
+    var b_toggle = this.togglePause.bind(this);
     key('up', function(){ return false; });
     key('right', function(){ return false; });
     key('left', function(){ return false; });
     key('space', function(){ if (Game.State == "play") {that.fireBullet(); return false; } });
+    key('p', b_toggle );
+    this.keysBound = true;
     //key('g', function(){ console.log("PRESSED G"); });
   }
 
@@ -200,8 +226,8 @@
     this.addAsteroids(Game.MaxAsteroids);
     var performStep = this.step.bind(this);
 
-
-    this.timer = setInterval( performStep , Game.FPS )
+    this.timer = window.setInterval( performStep , Game.FPS );
+    Game.State = "start";
   }
 
   Game.prototype.checkCollisions = function() {
@@ -221,14 +247,13 @@
     clearInterval(this.timer);
 
     this.asteroids = [];
-    this.ship = new Asteroids.Ship([250,250]);
+    this.ship = new Asteroids.Ship([Game.DIM_X/2,Game.DIM_Y/2]);
     this.bullets = [];
     this.debris = [];
     this.background;
     Game.Velocity = .5;
     Game.MaxAsteroids = 15;
     Game.Score = 0;
-    Game.State = "play";
 
     this.start();
   }

@@ -41,6 +41,7 @@ body {
   margin: auto;
   color: #555;
   background: #333;
+  overflow: scroll;
 }
 
 img {
@@ -361,4 +362,60 @@ button.restart {
 
 
 
+
+canvas {
+        outline: none;
+        display: block;
+        width: 400px;
+        border: 3px solid rgb(135,206,250);
+        margin: 20px auto;
+    }
+
+    .asteroids .controls {
+        width: 400px;
+        margin: auto;
+    }
+
+    .asteroids .controls:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    .asteroids .directions {
+        width: 240px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .asteroids .settings {
+        width: 150px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    .asteroids .directions td {
+        padding: 5px;
+    }
+
+    .asteroids tr {
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .asteroids .directions td:first-child {
+        width: 100px;
+        text-align: center;
+    }
+    
+    .asteroids button {
+        font-weight: bold;
+        display: block;
+        margin: auto;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
 

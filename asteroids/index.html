@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroids</title>
+    <script src="lib/tools.js"></script>
+</head>
+<body>
+    <section class="asteroids">
+    <canvas width="500" height="500"></canvas>
+
+    <section class="controls">
+        <table class="directions">
+            <tr>
+                <td> &uarr; </td>
+                <td>Move Forward</td>
+            </tr>
+            <tr>
+                <td> &larr; </td>
+                <td>Rotate Left</td>
+            </tr>
+            <tr>
+                <td> &rarr; </td>
+                <td>Rotate Right</td>
+            </tr>
+            <tr>
+                <td>[spacebar]</td>
+                <td>Fire</td>
+            </tr>
+            <tr>
+                <td> P </td>
+                <td>Pause/Play</td>
+            </tr>
+        </table>
+
+        <div class="settings">
+            <button onclick="game.restart()">RESET GAME</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="lib/keymaster.js"></script>
+    <script src="game.js"></script>
+    <script src="moving_object.js"></script>
+    <script src="asteroid.js"></script>
+    <script src="ship.js"></script>
+    <script src="bullet.js"></script>
+    <script src="debris.js"></script>
+
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d")
+        var game = new Asteroids.Game(ctx)
+        game.start()
+    </script>
+    </section
+</body>
+</html>
+
+<style type="text/css">
+    canvas {
+        outline: none;
+        display: block;
+        width: 400px;
+        border: 3px solid rgb(135,206,250);
+        margin: 20px auto;
+    }
+
+    .asteroids.controls {
+        width: 400px;
+        margin: auto;
+    }
+
+    .asteroids.controls:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    .asteroids.directions {
+        width: 200px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .asteroids.settings {
+        width: 120px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    .asteroids.directions td {
+        padding: 5px;
+    }
+
+    .asteroids tr {
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .asteroids.directions td:first-child {
+        width: 100px;
+        text-align: center;
+    }
+    
+    .asteroids button {
+        font-weight: bold;
+        display: block;
+        margin: auto;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+
+</style>
