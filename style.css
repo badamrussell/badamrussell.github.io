@@ -285,6 +285,13 @@ button.restart {
   border-bottom: 1px solid #ccc;
 }
 
+#content h2 {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
 .hidden {
   display: none;
 }

@@ -214,13 +214,42 @@
       </div>
 
       <div class="content-title group">
-        <h3 class="project-title left">Yolp (yelp clone)</h3>
+        <h3 class="project-title left">Yolp</h3>
         <a href="https://github.com/badamrussell/yelpClone">code</a>
       </div>
 
       <p>
-        Poker developed for the Terminal using Ruby and TDD.
+        Yolp is a faux-site that was created for educational purposes. The idea was to take an existing site that had a lot going on and try to replicate its functionality. This way, I did not have to worry about the design aspects and could concentrate on functionality and essentially practice programming in a bigger sandbox.
       </p>
+      <p>
+        So Yolp is a reconstruction of the popular restaurant reviewing website yelp.com. It is filled with lots of fake data including users, businesses, and reviews.
+      </p>
+
+      <h2>Features include:</h2>
+      <ul>
+        <li>
+          <h3>Database Design</h3>
+          <ul>
+            <li>Denormalized some data using of Active Record Counter Cache and custom counters using ActiveRecord Callbacks</li>
+            <li>Use of Database Transactions for creating new reviews and businesses</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Nested Forms</h3>
+          <ul>
+            <li>AJAX used for user upvoting and complimenting</li>
+            <li>UJS on search page (so you can search with or without JavaScript)</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Search</h3>
+          <ul>
+            <li>Basic postgres searching using tsvector and tsquery</li>
+            <li>Elasticsearch searches the text for the top review of each business. includes text highlighting and ranking.</li>
+          </ul>
+        </li>
+      </ul>
+
     </article>
 
     <article id="6" class="hidden">
