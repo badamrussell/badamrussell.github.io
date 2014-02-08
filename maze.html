@@ -37,11 +37,10 @@
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
 
-    <img id="project-icon" data-href="diet_rails.html" src="images/railsLite.png">
+    <img id="project-icon" data-href="maze.html" src="images/maze.png">
 
     <ul id="project-thumbnails" class="group">
       <li><a href="searchtree.html"><img class="project-thumb left" src="images/tree.png"></a></li>
-      <li><a href="maze.html"><img class="project-thumb left" src="images/maze.png"></a></li>
       <li><a href="poker.html"><img class="project-thumb left" src="images/poker.png"></a></li>
       <li><a href="yolp.html"><img class="project-thumb left" src="images/yolp.png"></a></li>
       <li><a href="queens.html"><img class="project-thumb left" src="images/queen.png"></a></li>
@@ -54,58 +53,42 @@
   </section>
 
   <section id="content" class="left">
-    <article>
-      <div class="languages-used">
-        <input type="hidden" value="HTML">
-        <input type="hidden" value="RUBY">
-      </div>
-      <div class="techs-used">
-        <input type="hidden" value="ERB">
-      </div>
+<article>
+  <div class="languages-used">
+    <input type="hidden" value="RUBY">
+  </div>
+  <div class="techs-used">
+  </div>
 
-      <div class="content-title group">
-        <h3 class="project-title left">Diet Rails</h3>
-        <a href="https://github.com/badamrussell/rails_lite">code</a>
-      </div>
+  <div class="content-title group">
+    <h3 class="project-title left">Maze Escape</h3>
+    <a href="https://github.com/badamrussell/maze">code</a>
+  </div>
 
-      <p>
-        Generally, a good way to have a better understanding of something is to take it apart and try to rebuild it.
-        Sure you might end up with some extra parts, not have nearly as much functionality, and will never use it for any practical purposes... but you end up feeling a wee bit smarter.
+  <p>
+    Finding the shortest path through a maze.
+  </p>
+  <p>
+    This code uses the A* algorithm to determine the shortest path.
+    The A* algorithm was a good approach because it allows the program to explore all movement options, while giving the more promising moves more priority.
+    Also, doing it this way, the first path that is found will be one of the shortest paths, so the search can immediately end.
 
-        <ul>
-          <li>
-            <h3>Session Class</h3>
-            Provides methods to store and set cookies and the authenticity tokens for CSRF.
-          </li>
-          <li>
-            <h3>URLHelper Module</h3>
-            Dynamically creates helper methods to generate urls.
-          </li>
-          <li>
-            <h3>Router Class</h3>
-            Handles nested routes and sets up regular expressions to match against urls.
-          </li>
-          <li>
-            <h3>Params Class</h3>
-            Stores passed parameters.
-          </li>
-          <li>
-            <h3>HTMLHelper Module</h3>
-            Convenience methods for creating links and buttons.
-          </li>
-          <li>
-            <h3>Flash Class</h3>
-            Provides access to a hash that can be set on one page and retrieved on the next.
-          </li>
-          <li>
-            <h3>BaseController Class</h3>
-            Provides various render, redirect, flash and interfaces with instances of the other classes.
-            It uses the ERB class along with Ruby's binding class to generate rendered content. The binding allows access to all of of methods and variables of the controller instance to be used in the ERB rendering.
-          </li>
-        </ul>
-      </p>
-    </article>
-  </section>
+    <h3>The most important bits for this algorithm were:</h3>
+    <ul>
+      <li>
+        The Manhattan value of each move. Manhattan values are calculated by adding the total number of steps to reach a ceratin space and a estimate distance to the end.
+      </li>
+      <li>
+        The estimated distance assumes there are no walls, so it is just the direct number of spaces to the end position from the current position.
+      </li>
+      <li>
+        Ignoring the previous position. For determining the next set of possible moves, ignoring the previous position greatly reduces the amount of retreading.
+      </li>
+    </ul>
+  </p>
+</article>
+
+ </section>
 
   <section id="features" class="left">
     <h3 class="title">features</h3>
