@@ -258,5 +258,8 @@
     this.start();
   }
 
+  Game.prototype.resetCanvas = function(newCtx) {
+    this.ctx = newCtx;
+  }
 
 })(this)

@@ -128,7 +128,6 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-
 <script src="asteroids/lib/tools.js"></script>
 <script src="asteroids/lib/keymaster.js"></script>
 <script src="asteroids/game.js"></script>
@@ -138,114 +137,8 @@
 <script src="asteroids/bullet.js"></script>
 <script src="asteroids/debris.js"></script>
 
-<script>
-  var sortElements = function(allEls, inputEls, offset, $mainEl) {
-    var values = [];
-    for (var i=0; i < inputEls.length; i++) {
-      values[values.length] = $(inputEls[i]).val();
-    }
-
-    var activeIndex = 0;
-    var inactiveIndex = values.length;
-    var activeEls = [];
-    var inactiveEls = [];
-    var reset = true;
-
-    for (var i=0; i < allEls.length; i++) {
-      var $el = $(allEls[i]);
-      var nextIndex = inactiveIndex;
-      var isActive = false;
-
-      if (values.length > 0) {
-        for (var j=0; j < values.length; j++) {
-          if (values[j] == $el.text()) {
-            $el.removeClass("inactive");
-            values.splice(j, 1);
-
-            nextIndex = activeIndex;
-            isActive = true;
-            activeIndex += 1;
-            inactiveIndex -= 1;
-            break;
-          }
-        }
-      }
-
-      var newTop = (nextIndex - i) * offset;
-
-      if (isActive) {
-        activeEls[activeEls.length] = $el.clone();
-      } else {
-        inactiveEls[inactiveEls.length] = $el.clone();
-      }
-
-      $el.animate({top: "+=" + newTop}, "slow", "swing", function() {
-        if (reset) {
-          reset = false;
-          $mainEl.empty();
-          var els = activeEls.concat(inactiveEls);
-          for (var i=0; i < els.length; i++) {
-            $mainEl.append(els[i])
-          }
-
-        }
-      });
-
-      inactiveIndex += 1;
-    }
-  }
-
-  var swapArticle = function(href) {
-    var req = new XMLHttpRequest();
-    req.open("GET",
-             href.split("/").pop(),
-             false);
-    req.send(null);
-
-    if (req.status == 200) {
-      $response = $(req.responseText).find("article")
-
-      $("#content").html($response);
-      return true;
-    }
-    return false;
-
-  }
-
-  $(function() {
-    $(".project-sidebar").click("project-thumb", function(event) {
-      event.preventDefault();
-
-      var $target = $(event.target);
-      var $icon = $("#project-icon");
-      var $parent = $target.parent("a")
-      $(".language").addClass("inactive");
-      $(".tech").addClass("inactive");
-
-      swapArticle($target.parent("a").attr("href"));
-
-      history.pushState(null, null, $parent.attr("href"))
-
-      var $article = $("article");
-      var iconSrc = $icon.attr("src");
-      var icon_href = $icon.data("href");
-      $icon.attr("src", $target.attr("src"));
-      $target.attr("src", iconSrc);
-
-      $icon.data("href", $parent.attr("href"));
-      $parent.attr("href", icon_href);
-
-
-      sortElements($(".language"), $article.find(".languages-used input"), 40.5, $("#languages"))
-
-      sortElements($(".tech"), $article.find(".techs-used input"), 20, $("#technology"))
-    
-    });
-  });
-
-</script>
-
-
+<script src="tech_sort.js"></script>
+<script src="startup.js"></script>
 
 </body>
 </html>
