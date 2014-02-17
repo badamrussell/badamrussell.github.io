@@ -1,0 +1,9 @@
+name: "B. Adam Russell Portfolio"
+description: "my portfolio site"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
