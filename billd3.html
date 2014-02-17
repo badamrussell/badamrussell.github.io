@@ -37,15 +37,15 @@
   <section class="project-sidebar left">
     <h3 class="title">projects</h3>
 
-    <img id="project-icon" data-href="knight_moves.html" src="images/knight.png">
+    <img id="project-icon" data-href="billd3.html" src="images/billd3.png">
 
     <ul id="project-thumbnails" class="group">
-      <li><a href="billd3.html"><img class="project-thumb left" src="images/billd3.png"></a></li>
+      <li><a href="poker.html"><img id="project-icon" src="images/poker.png"></a></li>
       <li><a href="searchtree.html"><img class="project-thumb left" src="images/tree.png"></a></li>
       <li><a href="maze.html"><img class="project-thumb left" src="images/maze.png"></a></li>
-      <li><a href="poker.html"><img class="project-thumb left" src="images/poker.png"></a></li>
       <li><a href="yolp.html"><img class="project-thumb left" src="images/yolp.png"></a></li>
       <li><a href="queens.html"><img class="project-thumb left" src="images/queen.png"></a></li>
+      <li><a href="knight_moves.html"><img class="project-thumb left" src="images/knight.png"></a></li>
       <li><a href="chess.html"><img class="project-thumb left" src="images/chess.png"></a></li>
       <li><a href="asteroids.html"><img class="project-thumb left" src="images/asteroids.png"></a></li>
       <li><a href="brain_gems.html"><img class="project-thumb left" src="images/brainGemsIcon.png"></a></li>
@@ -53,27 +53,38 @@
     </ul>
   </section>
 
+
   <section id="content" class="left">
-  <article>
+
+<article>
   <div class="languages-used">
-    <input type="hidden" value="RUBY">
-    <input type="hidden" value="RSPEC">
+    <input type="hidden" value="JAVASCRIPT">
+    <input type="hidden" value="HTML">
+    <input type="hidden" value="CSS">
   </div>
   <div class="techs-used">
-    <input type="hidden" value="TDD">
+    <input type="hidden" value="D3">
+    <input type="hidden" value="SVG">
   </div>
 
   <div class="content-title group">
-    <h3 class="project-title left">Knight Moves</h3>
-    <a href="https://github.com/badamrussell/knight">code</a>
+    <h3 class="project-title left">Political Votes in D3</h3>
+    <a href="https://github.com/badamrussell/billd3">code</a>
+    <a href="billd3/index.html">website</a>
   </div>
 
   <p>
-    Determine the least number of moves required to move a knight to another position on a chess board.
+    My first attempt at D3.js using data using the <a href="http://sunlightlabs.github.io/congress/">sunlight foundation</a> api. Currently it is not pretty, but works. The looks will be coming soon.
   </p>
   <p>
-    Uses a custom <a href="project-2.html">binary search tree</a> class I wrote to determine the correct sequence of moves.
+    Every bill has several stages of voting. Clicking on each will move the little legislators to where they voted on the bill. This allows you to see each voting stage and the various ways it breaks down in the various 'Yeas' and 'Nays'. You can see the splits by:
+    <ul>
+      <li>political party (red/blue/green color)</li>
+      <li>rough age of legislators (circle diameter)</li>
+      <li>states</li>
+    </ul>
   </p>
+  <p>While the context of each voting is still a mystery, manipulating the data into something visual and interesting was great practice. Still more to do!</p>
 </article>
 
  </section>
@@ -81,24 +92,24 @@
   <section id="features" class="left">
     <h3 class="title">features</h3>
     <section id="languages" class="left">
-      <div class="language ruby">RUBY</div>
+      <div class="language js">JAVASCRIPT</div>
       <div class="language web">HTML</div>
+      <div class="language web">CSS</div>
       <div class="language js inactive">JQUERY</div>
+      <div class="language ruby inactive">RUBY</div>
       <div class="language sql inactive">SQL</div>
       <div class="language sql inactive">POSTGRES</div>
       <div class="language sql inactive">SQLITE</div>
-      <div class="language js inactive">JAVASCRIPT</div>
       <div class="language ruby inactive">RAILS</div>
       <div class="language js inactive">BACKBONE.JS</div>
-      <div class="language web inactive">CSS</div>
       <div class="language ruby inactive">RSPEC</div>
       <div class="language lua inactive">LUA</div>
       <div class="language lua inactive">CORONASDK</div>
     </section>
 
     <section id="technology" class="left">
-      <div class="tech">GIT</div>
-      <div class="tech">ERB</div>
+      <div class="tech">D3</div>
+      <div class="tech">SVG</div>
       <div class="tech inactive">UJS</div>
       <div class="tech inactive">Google Maps</div>
       <div class="tech inactive">OAuth</div>
@@ -108,8 +119,6 @@
       <div class="tech inactive">Amazon</div>
       <div class="tech inactive">iTunes</div>
       <div class="tech inactive">Facebook</div>
-      <div class="tech inactive">D3</div>
-      <div class="tech inactive">SVG</div>
     </section>
   </section>
 </div>
