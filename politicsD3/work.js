@@ -245,7 +245,7 @@
     clearInterval(stateInterval);
     force.stop();
     // $keywordArea.append("<p>" + keywords.join() + "</p>");
-    $billArea.append("<h1>" + bill.official_title + "</h1>");
+    $billArea.html("<h1>" + bill.official_title + "</h1>");
 
     // $voteArea.empty();
     $voteArea.append("<h2>Votes for " + bill.bill_id + "</h2>")
@@ -303,7 +303,7 @@
     updateYeaNayText();
   });
 
-  // request_bill();
+  request_bill();
 })()
 
 
