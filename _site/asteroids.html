@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroids</title>
+    <script src="lib/tools.js"></script>
+</head>
+<body>
+
+    <section class="asteroids">
+        <h1>Asteroids</h1>
+    <canvas width="500" height="500"></canvas>
+
+    <section class="controls">
+        <table class="directions">
+            <tr>
+                <td> &uarr; </td>
+                <td>Move Forward</td>
+            </tr>
+            <tr>
+                <td> &larr; </td>
+                <td>Rotate Left</td>
+            </tr>
+            <tr>
+                <td> &rarr; </td>
+                <td>Rotate Right</td>
+            </tr>
+            <tr>
+                <td>[spacebar]</td>
+                <td>Fire</td>
+            </tr>
+            <tr>
+                <td> P </td>
+                <td>Pause/Play</td>
+            </tr>
+        </table>
+
+        <div class="settings">
+            <button onclick="game.restart()">RESET GAME</button>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="asteroids/lib/tools.js"></script>
+    <script src="asteroids/lib/keymaster.js"></script>
+    <script src="asteroids/game.js"></script>
+    <script src="asteroids/moving_object.js"></script>
+    <script src="asteroids/asteroid.js"></script>
+    <script src="asteroids/ship.js"></script>
+    <script src="asteroids/bullet.js"></script>
+    <script src="asteroids/debris.js"></script>
+
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        var ctx = canvas.getContext("2d");
+        var game = new Asteroids.Game(ctx, 500);
+        game.start();
+    </script>
+    </section
+</body>
+</html>
+
+<style type="text/css">
+    body {
+        background: #222;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        color: #ccc;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    canvas {
+        outline: none;
+        display: block;
+        width: 400px;
+        border: 3px solid #ccc;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .asteroids .controls {
+        width: 400px;
+        margin: auto;
+        background: #ccc;
+        padding: 3px;
+    }
+
+    .asteroids .controls:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    .asteroids .directions {
+        width: 250px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .asteroids .settings {
+        width: 120px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    .asteroids .directions td {
+    font-family: sans-serif;
+        padding: 5px;
+    }
+
+    .asteroids tr {
+        display: block;
+        border-bottom: 1px solid #999;
+    }
+
+    .asteroids tr:last-child {
+        border-bottom: none;
+    }
+
+    .asteroids .directions td:first-child {
+        width: 100px;
+        text-align: center;
+    }
+    
+    .asteroids button {
+        font-weight: bold;
+        display: block;
+        margin: auto;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+
+</style>
