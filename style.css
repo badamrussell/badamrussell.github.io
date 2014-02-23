@@ -319,7 +319,7 @@ body {
 .content {
 	width: 320px;
 	margin-left: 10px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 20px;
 	/*margin-left: 91px;*/
 }
@@ -327,6 +327,7 @@ body {
 .side-details {
 	width: 50px;
 	font-size: 14px;
+	font-weight: bold;
 }
 
 .side-details a {
