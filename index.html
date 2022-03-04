@@ -1,40 +1,11 @@
----
-layout: default
-title: Home
----
-
-<header class="page-description">
-	<div>various projects</div>
-</header>
-
-{% for post in site.posts %}
-	<article class="main-article">
-		
-		<header class="group">
-			<img class="icon left" src="images/{{ post.icon }}">
-
-			<div class="left heading">
-				<h1 class="title">{{ post.name }}</h1>
-				<h3 class="sub-heading">{{ post.heading }}</h3>
-			</div>
-		</header>
-
-		<div class="group">
-			<section class="side-details left">
-				{% if post.website_link %}
-				<a href="{{ post.website_link }}">website</a>
-				{% endif %}
-
-				{% if post.code_link %}
-				<a href="{{ post.code_link }}">code</a>
-				{% endif %}
-			</section>
-
-			<section class="content left">
-				{{ post.content }}
-			</section>
-		</div>
-
-	</article>
-{% endfor %}
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR portfolio</title>
+  </head>
+  <body>
+    <h1>my portfolio site!</h1>
+    <p>some random text</p>
+  </body>
+</html>
